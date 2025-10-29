@@ -17,7 +17,7 @@ It helps you stay organized by allowing you to easily add and delete tasks.
 
   ## 🚀 Live Demo
 
-👉 [View Live Project]( https://washiy-codes.github.io/RPG-Search-App/)  
+👉 [View Live Project](https://washiy-codes.github.io/todo-app/)  
 
 
 ---
