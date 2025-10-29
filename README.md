@@ -15,7 +15,7 @@ It helps you stay organized by allowing you to easily add and delete tasks.
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Vite](https://vitejs.dev)
 
-  ## 🚀 Live Demo
+## 🚀 Live Demo
 
 👉 [View Live Project](https://washiy-codes.github.io/todo-app/)  
 
