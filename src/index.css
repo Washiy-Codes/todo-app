@@ -5,10 +5,19 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background: #f3f4f6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 .todo-container {
   width: 100%;
-  max-width: 400px;
-  margin: 80px auto;
+  max-width: 500px;
+  margin: 50px auto;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -28,7 +37,8 @@
   font-size: 1.2rem;
 }
 .todo-container input {
-  width: 70%;
+  height: 2.7em;
+  width: 65%;
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 8px;
@@ -41,13 +51,14 @@
 }
 
 .todo-container .btn {
-  padding: 10px 15px;
+  height: 2.7em;
+  width: 28%;
   margin-left: 8px;
   border: none;
   border-radius: 8px;
   background: #7c3aed;
   color: #fff;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -56,7 +67,6 @@
   background: #6d28d9;
 }
 
-/* Todo list */
 ul {
   list-style: none;
   margin-top: 25px;
@@ -84,7 +94,6 @@ li span {
   font-size: 0.95rem;
 }
 
-/* Delete button */
 li button {
   background: #ef4444;
   border: none;
@@ -100,7 +109,7 @@ li button:hover {
   background: #dc2626;
 }
 
-/* Subtle fade-in animation */
+
 li {
   animation: fadeIn 0.3s ease;
 }
@@ -113,5 +122,20 @@ li {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .todo-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .todo-container input {
+    width: 65%;
+  }
+
+  .todo-container .btn {
+    width: 30%;
   }
 }
