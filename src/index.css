@@ -17,9 +17,9 @@ body {
 .todo-container {
   width: 100%;
   max-width: 500px;
-  margin: 50px auto;
+  margin: 20px auto;
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 25px 30px;
   transition: all 0.3s ease-in-out;
@@ -41,7 +41,7 @@ body {
   width: 65%;
   padding: 10px;
   border: 2px solid #ddd;
-  border-radius: 8px;
+  border-radius: 4px;
   outline: none;
   transition: border 0.3s ease;
 }
@@ -49,13 +49,19 @@ body {
 .todo-container input:focus {
   border-color: #7c3aed;
 }
+.inline-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .todo-container .btn {
   height: 2.7em;
-  width: 28%;
+  width: 5rem;
   margin-left: 8px;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   background: #7c3aed;
   color: #fff;
   font-weight: 400;
@@ -113,11 +119,10 @@ li button:hover {
 li {
   animation: fadeIn 0.3s ease;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-5px);
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
