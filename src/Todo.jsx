@@ -9,8 +9,9 @@ const Todo = () => {
         setInput(e.target.value);
     };
 
-    const handleSubmit = () => {
-        if(input) {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if(input.toString().trim().length > 0){
             setTodos([...todos, input]);
             setInput("");
         }
@@ -30,7 +31,7 @@ const Todo = () => {
 
   return (
     <div className="todo-container">
-      <div className="input-group">
+      <form className="input-group" onSubmit={handleSubmit}>
         <input 
           type="text" 
           value={input} 
@@ -38,10 +39,11 @@ const Todo = () => {
           placeholder="Add a new todo" 
           onKeyDown={handleKeyDown}
         />
-        <button type="button" onClick={handleSubmit} className="btn">Add Todo</button>
-      </div>
+        <button type="submit" className="btn">Add Todo</button>
+      </form>
         <ul>
-            {todos.length === 0 && <p>No todos available. Please add some tasks!</p>}
+            {todos.length === 0? (<span className="span">No todos available. Please add some tasks!</span>) : ( <span className="span">You now have <strong>{todos.length}</strong> todos</span>)}
+            
             {todos.map((todo, index) => (
                 <li key={index}>
                     <span>{todo}</span>
