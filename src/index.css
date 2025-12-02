@@ -7,21 +7,16 @@
 
 body {
   background: #f3f4f6;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  height: 100vh;
 }
 
 .todo-container {
-  width: 100%;
-  max-width: 500px;
+  width: 400px;
   margin: 20px auto;
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 4px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 25px 30px;
+  padding:10px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -36,37 +31,41 @@ body {
   font-weight: 600;
   font-size: 1.2rem;
 }
-.todo-container input {
-  height: 2.7em;
-  width: 65%;
-  padding: 10px;
+ input[type="text"] {
+  display: block;
+  width: 70%;
   border: 2px solid #ddd;
-  border-radius: 4px;
+  border-right: none;
   outline: none;
-  transition: border 0.3s ease;
 }
 
 .todo-container input:focus {
   border-color: #7c3aed;
 }
-.inline-group {
+.input-group {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+} 
+input[type="text"], .btn {
+  height: 2.7em;
+  padding: 0 15px;
 }
 
-.todo-container .btn {
-  height: 2.7em;
-  width: 5rem;
-  margin-left: 8px;
+ .btn {
+  width:30%;
   border: none;
-  border-radius: 4px;
+  display: inline-block;
   background: #7c3aed;
   color: #fff;
   font-weight: 400;
   cursor: pointer;
-  transition: background 0.3s ease;
+}
+.span{
+  display: block;
+  margin: 15px auto;
+  text-align: center;
+  color: #0c0c0c;
+  font-size: 1.2rem;
 }
 
 .todo-container .btn:hover {
